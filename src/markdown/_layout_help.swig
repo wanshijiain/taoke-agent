@@ -1,0 +1,1 @@
+{% extends '../swig/_layout_page.swig' %}

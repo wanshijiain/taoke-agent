@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>指尖客</title>
+    <link rel="stylesheet" href="/agents-web/static/libs/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="/agents-web/static/libs/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="/agents-web/css/main.css">
+    <link rel="stylesheet" href="/agents-web/css/welcomescreen.css">
+    <link rel="stylesheet" href="/agents-web/css/iconfont.css">
+    <link rel="stylesheet" href="/agents-web/css/pages.css">
+
+    <script type="text/javascript" src="/agents-web/static/libs/seajs/sea.js"></script>
+    <script type="text/javascript" src="/agents-web/js/core/main.js"></script>
+</head>
+<body class="theme-gray">
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<div class="views">
+    <div class="view view-main">
+        
+    <div class="pages">
+        <div data-page="setting_fundDetails" class="page navbar-through setting_fundDetails toolbar-fixed home_detail" id="setting_fundDetails">
+            
+            
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="../home/index.html" class="back link"><i class="icon icon-back"></i></a></div>
+            <div class="center sliding">资金明细</div>
+            <div class="right">
+            </div>
+        </div>
+    </div>
+
+            
+            <div class="page-content  pull-to-refresh-content infinite-scroll">
+                
+                    <div class="pull-to-refresh-layer">
+                        <div class="preloader"></div>
+                        <div class="pull-to-refresh-arrow"></div>
+                    </div>
+                
+                
+                <div class="page_container">
+                    
+                </div>
+                
+                
+                    <div class="infinite-scroll-preloader">
+                        <div class="preloader"></div>
+                    </div>
+                
+            </div>
+            
+    
+        <script id="fundDetail" type="text/template7">
+            <div class="list-block media-list no-margin">
+                <ul>
+                    {{#content}}
+                    <li>
+                        <div class="item-content">
+                            {{#if amountFormat>0}}
+                            <div class="item-media"><i class="iconfont icon-chong"></i></div>
+                            {{else}}
+                            <div class="item-media"><i class="iconfont icon-gou"></i></div>
+                            {{/if}}
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">{{remarks}}：{{amountFormat}}</div>
+                                </div>
+                                <div class="item-subtitle">{{dtime createDate}}</div>
+                                <div class="item-mine">余额：{{totalAmountFormat}}</div>
+                            </div>
+                        </div>
+                    </li>
+                    {{/content}}
+                </ul>
+            </div>
+        </script>
+    
+
+        </div>
+    </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

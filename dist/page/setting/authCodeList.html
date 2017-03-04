@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>指尖客</title>
+    <link rel="stylesheet" href="/agents-web/static/libs/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="/agents-web/static/libs/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="/agents-web/css/main.css">
+    <link rel="stylesheet" href="/agents-web/css/welcomescreen.css">
+    <link rel="stylesheet" href="/agents-web/css/iconfont.css">
+    <link rel="stylesheet" href="/agents-web/css/pages.css">
+
+    <script type="text/javascript" src="/agents-web/static/libs/seajs/sea.js"></script>
+    <script type="text/javascript" src="/agents-web/js/core/main.js"></script>
+</head>
+<body class="theme-gray">
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<div class="views">
+    <div class="view view-main">
+        
+    <div class="pages">
+        <div data-page="setting_authCodeList" class="page navbar-through setting_authCodeList toolbar-fixed home_detail" id="setting_authCodeList">
+            
+            
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="../home/index.html" class="back link"><i class="icon icon-back"></i></a></div>
+            <div class="center sliding">激活记录</div>
+            <div class="right">
+            </div>
+        </div>
+    </div>
+
+            
+            <div class="page-content  pull-to-refresh-content infinite-scroll">
+                
+                    <div class="pull-to-refresh-layer">
+                        <div class="preloader"></div>
+                        <div class="pull-to-refresh-arrow"></div>
+                    </div>
+                
+                
+                <div class="page_container">
+                    
+
+                </div>
+                
+                
+                    <div class="infinite-scroll-preloader">
+                        <div class="preloader"></div>
+                    </div>
+                
+            </div>
+            
+    
+        <script id="authCodeRec1" type="text/template7">
+            <div class="updateUser" style="display: none">
+                <div class="updateUser-content">
+                    <p><input type="number" placeholder="请输入新的用户手机号" id="phone" name="phone"></p>
+                    <p><a class="updateUser-cancel">取消</a><a class="updateUser-btn">确认修改</a></p>
+                </div>
+            </div>
+            <div class="list-block media-list no-margin">
+                <ul>
+                    {{#content}}
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">被激活人：{{phone}}</div>
+                                </div>
+                                <div class="item-subtitle">生成时间：{{dtime createDate}}</div>
+                                {{#js_compare "this.use == 'F'"}}
+                                <div class="item-mine canChange" data-id="{{id}}">点击更改用户</div>
+                                {{/js_compare}}
+                            </div>
+                        </div>
+                    </li>
+                    {{/content}}
+                </ul>
+            </div>
+        </script>
+    
+
+        </div>
+    </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
